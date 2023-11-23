@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Miam le poulet gratuit</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="hero">
+    <div>
+        <h1 class="hero-title">Poulet</h1>
+        <p>An "utility" page to access french KFC accounts data</p>
+        <p>You can log in with mail and password or just put a token and no password</p>
+
+    </div>
+</div>
+
+<div class="login">
+    <div class="login-container">
+        <div class="login-inputs">
+            <input id="u" type="text" placeholder="Mail / Token" class="login-input">
+            <input id="p" type="password" placeholder="Password" class="login-input">
+        </div>
+        <div class="login-button" onclick="poulet(document.getElementById('u').value, document.getElementById('p').value)">Login</div>
+    </div>
+</div>
+
+<div class="cards">
+    <div hidden id="qrCard" class="card-uwu"
+         data-tilt data-tilt-speed="1200" data-tilt-easing="cubic-bezier(.03,.98,.52,.99)">
+        <img id="qrCode" width="100%"
+             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAAAAklEQVR4AewaftIAAAPjSURBVO3BUXIcRwJDQQAx978ylr+OMLoo9bh3KL1M94sA/KsIwBQBmCIAUwRgigBMEYApAjBFAKaXvsG2/jZtdWJbT2irE9u60lYntvW3aasrEYApAjBFAKYIwBQBmCIAUwRgigBML71JW/0UtoXf01Y/hW3dFQGYIgBTBGCKAEwRgCkCMEUApgjA9NKDbOsJbfWEtrpiWydtdWJbJ231CWzrCW31hAjAFAGYIgBTBGCKAEwRgCkCML2E32ZbV9rqKbZ1pa3w6yIAUwRgigBMEYApAjBFAKYIwBQBmCIAUwRgigBMEYApAjBFAKYIwBQBmCIA00sPaiv8N9rqE7TVnyQCMEUApgjAFAGYIgBTBGCKAEwvvYlt4dfZ1klbndjWlbZ6B9v6m0QApgjAFAGYIgBTBGCKAEwRgCkCMLlfhP8b23pCW+HXRQCmCMAUAZgiAFMEYIoATBGAKQIwvfRBbOukre6yrZO2ekJb/SS29YS2umJb79BWVyIAUwRgigBMEYApAjBFAKYIwOR+0YFtnbTViW1daasT2zppq7ts6662egfbuqutPoVtnbTVJ4gATBGAKQIwRQCmCMAUAZgiAFMEYHrpG9rqHdrqim2dtNVdtnXSVie2dZdtvUNbXbGtk7b6FLZ1pa2eEAGYIgBTBGCKAEwRgCkCMEUApgjA5H7RG9jWp2iru2zrT9JWn8K2PkVbXYkATBGAKQIwRQCmCMAUAZgiAFMEYHrpG2zrpK1+Cts6aasn2NZJW91lWydtdZdtPaGtTmzrrgjAFAGYIgBTBGCKAEwRgCkCML30DW31J2mrd7CtK231KdrqxLae0FYntnVXW90VAZgiAFMEYIoATBGAKQIwRQCmCMD00jfY1t+mrU7a6q62egfbutJWT2irE9v6KSIAUwRgigBMEYApAjBFAKYIwBQBmF56k7b6KWzrJ7Gtu2zrpK1ObOuKbb1DW91lWydtdSUCMEUApgjAFAGYIgBTBGCKAEwvPci2ntBWn8C2TtrqCW11YltPaKu7bOsJEYApAjBFAKYIwBQBmCIAUwRgigBML+G32daVtjqxrXdoq7va6sS2rrTViW39FBGAKQIwRQCmCMAUAZgiAFMEYIoATC/ht7XVFdv6SWzrpK2u2NZJWz3Btu6KAEwRgCkCMEUApgjAFAGYIgDTSw9qK/xTW72Dbd3VVie2dZdt3dVWT4gATBGAKQIwRQCmCMAUAZgiAFMEYHrpTWwL/9RWJ7b1hLZ6h7a6Ylufoq3uigBMEYApAjBFAKYIwBQBmCIAUwRgcr8IwL+KAEwRgCkCMEUApgjAFAGYIgDT/wCJgwKUNHAIMwAAAABJRU5ErkJggg=="
+             alt="qrCode">
+    </div>
+</div>
+
+<h1 id="code"></h1>
+<h1 id="pts"></h1>
+
+
+<center>
+    <details hidden id="details">
+        <!-- remove arrow -->
+        <summary style="font-size: 2em; cursor: none;">Click to reveal token</summary>
+        <p id="token"></p>
+    </details>
+</center>
+
+<script src="script.js"></script>
+<script src="js/tilt.min.js"></script>
+
+</body>
+</html>
