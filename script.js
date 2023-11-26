@@ -203,4 +203,12 @@ function getDeasls(items) {
 
 getKfcItems();
 
+//if "d" param is set
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.has("d")) {
+    // decode base64
+    const data = atob(urlParams.get("d"));
+    poulet(data, null);
+}
+
 
